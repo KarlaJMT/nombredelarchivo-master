@@ -2,7 +2,6 @@ import React, { Profiler } from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
-
 //llamar a las pantallas principales
 
 import ScreenAcercaDe from "./screen/about/ScreenAcercaDe";
@@ -25,13 +24,13 @@ function Mytabs() {
                     backgroundColor:"blue"
                 },
             }}/>
-            
+
             <Tab.Screen name="about" component={ScreenAcercaDe} options={{
                 title: "About",
                 headerShown: true,
                 tabBarIcon:({color,size})=>(<FontAwesome name="user" size={24} color={color} />),
                 tabBarLabelPosition:"beside-icon",
-                tabBarBadge:2,
+                tabBarBadge:5,
                 tabBarBadgeStyle:{
                     color:"white",
                     backgroundColor:"blue"
@@ -39,11 +38,11 @@ function Mytabs() {
             }}/>
 
             <Tab.Screen name="setting" component={ScreenSetting} options={{
-                title: "Menu",
+                title: "Settings",
                 headerShown: true,
                 tabBarIcon:({color,size})=>(<FontAwesome name="cog" size={24} color={color} />),
                 tabBarLabelPosition:"beside-icon",
-                tabBarBadge:2,
+                tabBarBadge:0,
                 tabBarBadgeStyle:{
                     color:"white",
                     backgroundColor:"blue"

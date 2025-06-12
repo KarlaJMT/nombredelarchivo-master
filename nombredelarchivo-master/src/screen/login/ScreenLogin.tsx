@@ -21,7 +21,7 @@ export default function ScreenLogin() {
 
             </TextInput>
 
-            <Button style={{ marginTop: 10 }} icon="login" mode="text" onPress={() => rutas.push('')}>
+            <Button style={{ marginTop: 10 }} icon="login" mode="text" onPress={() => rutas.navigate('login')}>
                 Login
             </Button>
 
@@ -29,7 +29,7 @@ export default function ScreenLogin() {
                 style={{ marginTop: 10 }}
                 icon="account-plus"
                 mode="outlined"
-                onPress={() => rutas.push('crearcuenta')}>
+                onPress={() => rutas.navigate('crearcuenta')}>
                 Crear Cuenta
             </Button>
         </View>

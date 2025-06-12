@@ -2,14 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
-import Navegacion from "./Navegacion";
+import Navegacion from "./src/Navegacion";
+import StateGlobal from './src/context/StateGlobal';
+
 
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Navegacion/>
-    </NavigationContainer>
+    <StateGlobal>
+      <NavigationContainer>
+        <Navegacion />
+      </NavigationContainer>
+    </StateGlobal>
+
 
   );
 }

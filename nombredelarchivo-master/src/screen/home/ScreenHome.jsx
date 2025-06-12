@@ -1,14 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button } from 'react-native-paper';
 import { Avatar, Card, Icon } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import { estadoGlobal } from '../../context/contextData'; 
 
 
 
 export default function ScreenHome() {
 
   const rutas = useNavigation();
+  
+  // traer el estado global
+  const { sumar, restar, contador } = useContext(estadoGlobal);
+  console.log(contador);
 
   return (
     <View style={{padding:10}}>

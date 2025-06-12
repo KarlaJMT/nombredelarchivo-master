@@ -2,7 +2,7 @@ import { View, Text } from 'react-native';
 import React from 'react';
 import { estadoGlobal } from './contextData';
 
-export default function StateGlobal({children}) {
+export default function StateGlobal({ children }) {
 
     // contador
     const [contador, setContador] = React.useState(0);

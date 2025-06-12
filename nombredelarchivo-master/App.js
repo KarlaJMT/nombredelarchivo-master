@@ -4,16 +4,21 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import Navegacion from "./src/Navegacion";
 import StateGlobal from './src/context/StateGlobal';
+import StateLogin from './src/context/StateLogin';
 
 
 
 export default function App() {
   return (
-    <StateGlobal>
-      <NavigationContainer>
-        <Navegacion />
-      </NavigationContainer>
-    </StateGlobal>
+
+    <StateLogin>
+      <StateGlobal>
+        <NavigationContainer>
+          <Navegacion />
+        </NavigationContainer>
+      </StateGlobal>
+    </StateLogin>
+
 
 
   );

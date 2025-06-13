@@ -5,7 +5,7 @@ import { estadoGlobal } from './contextData';
 export default function StateGlobal({ children }) {
 
     // contador
-    const [contador, setContador] = React.useState(0);
+    const [contador, setContador] = React.useState(5);
 
     // suma
     const sumar = () => {
@@ -20,6 +20,9 @@ export default function StateGlobal({ children }) {
   return (
     <estadoGlobal.Provider value={{contador, sumar, restar}}>
         { children }
+        {/* <Text>
+          Total: {contador}
+        </Text> */}
     </estadoGlobal.Provider>
   )
 }

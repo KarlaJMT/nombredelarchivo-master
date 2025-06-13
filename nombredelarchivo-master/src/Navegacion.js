@@ -1,8 +1,10 @@
-import React, { Profiler } from "react"
+import React, { Profiler, useContext } from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { estadoGlobal } from "./context/contextData";
+import { estadoLoginGlobal } from "./context/contextData";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -110,11 +112,14 @@ function Mytabs() {
 }
 
 export default function Navegacion () {
-    return (
 
-        // const { StateLogin } = 
-        // <Mytabs/>
-        // <MyStackLogin/>
-        <MyDrawer/>
-    )
+    const { islogin } = useContext(estadoLoginGlobal);
+
+    return (
+        
+        <>
+        { islogin ? <Mytabs/> : <MyStackLogin/> }
+        </>
+        
+    ) // <MyDrawer/>
 }

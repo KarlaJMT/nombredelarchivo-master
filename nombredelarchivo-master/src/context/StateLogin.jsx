@@ -5,7 +5,7 @@ import { estadoLoginGlobal } from "./contextData";
 export default function StateLogin({ children }) {
 
     const [perfil, setPerfil] = useState();
-    const [islogin, setIslogin] = useState(true);
+    const [islogin, setIslogin] = useState(false);
 
 // función flecha
     const login = () => {

@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { Button } from 'react-native-paper';
 import { Avatar, Card, Icon } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-import { estadoGlobal } from '../../context/contextData'; 
+import { estadoGlobal, estadoLoginGlobal } from '../../context/contextData'; 
 
 
 
@@ -14,6 +14,7 @@ export default function ScreenHome() {
   // traer el estado global
   const { sumar, restar, contador } = useContext(estadoGlobal);
   console.log(contador);
+  const { outlogin } = useContext(estadoLoginGlobal);
 
   return (
     <View style={{padding:10}}>

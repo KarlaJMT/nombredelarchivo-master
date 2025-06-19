@@ -35,13 +35,7 @@ export default function ScreenLogin() {
 
             try {
                 const response = await fetch("http://localhost:4000/api/usuario/login", requestOptions);
-                const result = await response.json();
-                if (result.body.status == true) {
-                    alert('Bienvenido', result.body.user.nombre)
-                    login()
-                } else {
-                    alert('Mensaje', result.body.mensaje)
-                }
+                const result = await response.text();
                 console.log(result)
             } catch (error) {
                 console.error(error);
